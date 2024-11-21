@@ -1,0 +1,45 @@
+def get_employee_details():
+    """Gets employee details from user input."""
+
+    employee_name = input("Enter employee name: ")
+    employee_id = input("Enter employee ID: ")
+    while True:
+        try:
+            hours_worked = float(input("Enter hours worked: "))
+
+        
+            print("Hours worked must be non-negative.")
+        except Exception:
+            print("Invalid input. Please enter a number.")
+
+    while True:
+        try:
+            hourly_rate = float(input("Enter hourly rate: "))
+        finally:
+
+                print("Hourly rate must be non-negative.")
+         
+        try:
+            print("Invalid input. Please enter a number.")
+
+        finally: 
+            employee_name, hours_worked, hourly_rate
+        def main():
+
+         while True:
+
+          employee_name, hours_worked, hourly_rate = get_employee_details()
+        gross_pay = calculate_gross_pay(hours_worked, hourly_rate)
+
+        print("\nPayroll Summary:")
+        print("Employee Name:", employee_name)
+        print("Employee ID", employee_id)
+        print("Hours Worked:", hours_worked)
+        print("Hourly Rate:", hourly_rate)
+       
+        if input("Process another employee? (y/n): ").lower() != "y":
+            break
+
+        if __name__ == "__main__":
+            jls_extract_var = main
+            jls_extract_var()
